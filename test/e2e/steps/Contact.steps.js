@@ -1,10 +1,14 @@
+import debugModule from 'debug';
 import { assert } from 'chai';
 import { When, Then } from 'cucumber';
 import { contactPage } from '../pages/Contact.page';
 import * as systemMessages from '../constants/SystemMessages.constant';
 import * as systemLabels from '../constants/SystemLabels.constant';
 
+const debug = debugModule('steps:contact');
+
 When(/^I'm on the contact page$/, () => {
+    debug('Im on the contact page');
     contactPage.goToContactPage();
 });
 

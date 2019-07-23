@@ -16,7 +16,7 @@ exports.config = {
             'zal:build': 'WebDriverIO',
         },
     ],
-    logLevel: 'trace',
+    logLevel: 'error',
     bail: 0,
     baseUrl: 'http://automationpractice.com',
     waitforTimeout: 10000,

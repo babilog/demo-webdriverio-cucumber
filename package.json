@@ -15,7 +15,8 @@
     "format": "yarn run lint --fix --quiet && yarn run prettier --write",
     "lint": "eslint .",
     "prettier": "prettier --check \"**/*.js*\"",
-    "report": "allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report"
+    "report": "allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "log:test": "DEBUG=steps:contact yarn run e2e:tests"
   },
   "dependencies": {
     "@babel/cli": "^7.5.0",
@@ -45,5 +46,8 @@
     "prettier": "^1.18.2",
     "wdio-timeline-reporter": "^5.0.10",
     "webdriverio": "^5.11.0"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1"
   }
 }
